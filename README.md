@@ -24,25 +24,26 @@ Tú escribes los datos de la cámara, del sensor, del vuelo y de la parcela. El 
 
 ## Cómo ejecutar el programa
 
-Abre una terminal en la carpeta del proyecto y escribe:
+Abre una terminal (CMD) en la carpeta del proyecto y escribe:
 
 ```
-python Actividad_03.py
+py Actividad_03.py
 ```
 
 ## Cómo reconstruir el `.exe`
 
-Esto debe hacerse en Windows. Primero crea un entorno de Conda:
+Esto debe hacerse en Windows, con Python 3.12 instalado desde python.org.
+
+Primero instala PyInstaller (solo una vez):
 
 ```
-conda create --name actividad03 python=3.12 pyinstaller -y
-conda activate actividad03
+py -m pip install pyinstaller
 ```
 
 Luego genera el ejecutable:
 
 ```
-python -m PyInstaller --onefile --windowed --name PlanificadorVueloFotogrametrico Actividad_03.py
+py -m PyInstaller --onefile --windowed --name PlanificadorVueloFotogrametrico Actividad_03.py
 ```
 
 El archivo final queda en la carpeta `dist/`.
